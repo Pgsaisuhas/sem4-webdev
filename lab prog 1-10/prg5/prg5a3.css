@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+}
+.box{
+    width: 300px; display:flex; flex-direction:column; background-color: #323233; text-align:center; margin: 10% auto;
+}
+h1{
+    color: #ea0707;
+}
+p{
+    font-size: 16px; color:rgb(47, 47, 255);
+}

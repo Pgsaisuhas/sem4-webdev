@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zindex</title>
+    <style>
+        .box{
+            padding:25px;
+            border-radius: 5px;
+            text-align: center;
+            color: azure;
+            position: absolute;
+            width: 500px;
+        }
+        .a{
+            border: 2px solid red;
+            background-color: #474747;
+            top: 140px;
+            left: 400px;
+            z-index: 1;
+        }
+        .b{
+            border: 2px solid orange;
+            background-color: #767676;
+            top: 160px;
+            left: 450px;
+            z-index: 2;
+        }
+        .c{
+            border: 2px solid yellowgreen;
+            background-color: #555555;
+            top: 180px;
+            left: 500px;
+            z-index: 3;
+        }
+        .box:hover{
+            transition: 0.5s ease-in-out;
+            width: 700px;
+            left: 400px;
+        }
+    </style>
+    <script>
+        var toplayer = '3'
+        function mover(totop){
+            var oldtop = document.getElementById(toplayer).style;
+            var newtop = document.getElementById(totop).style;
+            oldtop.zIndex = 0;
+            newtop.zIndex = 4;
+            toplayer = document.getElementById(totop).id;
+        }
+    </script>
+</head>
+<body bgcolor="#232324">
+    <p class="box a" id=1 onmouseover=mover(1)>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nihil distinctio suscipit eum mollitia deserunt tempore quo id recusandae! Eveniet inventore, dignissimos distinctio veniam consequuntur consequatur praesentium reprehenderit similique dicta.</p>
+    <p class="box b" id=2 onmouseover=mover(2)>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nihil distinctio suscipit eum mollitia deserunt tempore quo id recusandae! Eveniet inventore, dignissimos distinctio veniam consequuntur consequatur praesentium reprehenderit similique dicta.</p>
+    <p class="box c" id=3 onmouseover=mover(3)>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nihil distinctio suscipit eum mollitia deserunt tempore quo id recusandae! Eveniet inventore, dignissimos distinctio veniam consequuntur consequatur praesentium reprehenderit similique dicta.</p>
+</body>
+</html>

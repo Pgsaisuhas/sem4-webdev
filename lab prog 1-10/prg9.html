@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>USN and Semester Collection</title>
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent the form from submitting by default
+
+      const usnPattern = /[1-4][A-Za-z]{2}\d{2}[A-Za-z]{2}\d{3}/;
+      const semester = document.querySelector('#semester').value;
+      const usn = document.querySelector('#usn').value;
+
+      if (!usnPattern.test(usn)) {
+        alert('Invalid USN format. Please enter a valid USN.');
+        return false;
+      }
+
+      if (semester < 1 || semester > 8) {
+        alert('Invalid semester. Please enter a semester between 1 and 8.');
+        return false;
+      }
+      
+      // If validation passes, the form will submit
+      alert('Validation complete!!');
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>USN and Semester Collection</h1>
+  <form onsubmit="return validateForm(event)" method="POST">
+    <label for="usn">USN:</label>
+    <input type="text" id="usn" name="usn" required>
+    <br>
+    <label for="semester">Semester:</label>
+    <input type="number" id="semester" name="semester" required>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

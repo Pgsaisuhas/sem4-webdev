@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lvdigr</title>
+</head>
+<body>
+    <script>
+        function reverseDigits(number){
+            const rd = number.toString().split('').reverse().join('');
+            return rd;
+        }
+
+        function leftvowel(str){
+            str = str.toLowerCase();
+            const vowel = "aeiou";
+            for(var i=0; i<str.length; i++){
+                if(vowel.includes(str[i])){
+                    return { "vowel": str[i], "value": i+1};
+                }
+            }
+            return -1;
+        }
+
+        const userInput = prompt("Enter a number or string: ");
+
+        if(!isNaN(userInput)){
+            alert(`the reverse of digit ${userInput}: ${reverseDigits(userInput)}`)
+        }else{
+            const x = leftvowel(userInput);
+            if(x != -1){
+                alert(`the left most vowel present is '${x.vowel}' at position: ${x.value}`)
+            }else{
+                alert("No vowels present")
+            }
+        }
+    </script>
+</body>
+</html>

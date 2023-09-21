@@ -1,0 +1,110 @@
+<!-- Write a HTML program to develop a static Registration Form. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #232324;
+        }
+        .container {
+            max-width: 400px;
+            margin: 2% auto;
+            padding: 20px;
+            background-color: #ebebeb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .gender-label {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            flex-direction: row;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1><hr>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Full Name:</label>
+                <input type="text" id="username" name="username" required>
+            </div><hr>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div><hr>
+            <div class="form-group">
+                <label for="phone">Contact No.:</label>
+                <input type="tel" id="phone" name="phone">
+            </div><hr>
+            <div class="form-group gender-label">
+                Gender:
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="Male">Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="Female">Female
+                </label>
+                <label for="others">
+                    <input type="radio" id="others" name="gender" value="Others">Others
+                </label>
+            </div><hr>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div><hr>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div><hr>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div><hr>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

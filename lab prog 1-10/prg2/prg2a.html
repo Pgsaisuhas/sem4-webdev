@@ -1,0 +1,106 @@
+<!-- Write a HTML program to create Class Time-Table using tables. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time table</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #232324;
+            color: beige;
+        }
+        table, td, th{
+            border: 2px solid whitesmoke;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th{
+            background-color: #565657;
+        }
+        td{
+            background-color: #373738;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table>
+            <tr><td colspan="10"><h2>Time Table</h2></td></tr>
+            <tr>
+                <th>Date/Time</th>
+                <th>8:00-9:00</th>
+                <th>9:00-10:00</th>
+                <th>10:00-10:20</th>
+                <th>10:20-11:20</th>
+                <th>11:20-12:20</th>
+                <th>12:20-1:00</th>
+                <th>1:00-2:00</th>
+                <th>2:00-3:00</th>
+                <th>3:00-4:00</th>
+            </tr>
+            <tr>
+                <th>Mon</th>
+                <td colspan="2">c1-Daa <br>c2-MC <br>c3-python</td>
+                <td rowspan="7">short <br> break</td>
+                <td>MC</td>
+                <td>OS</td>
+                <td rowspan="7">Lunck <br> break</td>
+                <td>MC</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Tue</th>
+                <td>Math</td>
+                <td>Daa</td>
+                <td>Uhv</td>
+                <td>Bio</td>
+                <td>Daa</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Wed</th>
+                <td>MC</td>
+                <td>OS</td>
+                <td colspan="2">c1-MC <br>c2-Daa <br>c3-web</td>
+                <td>Daa</td>
+                <td colspan="2">Club activities</td>
+                
+            </tr>
+            <tr>
+                <th>Thu</th>
+                <td>Math</td>
+                <td>OS</td>
+                <td>Math</td>
+                <td>Bio</td>
+                <td colspan="2">c1-web <br>c2-python <br>c3-Mc</td>
+                <td>Departmental <br> activities</td>
+                
+            </tr>
+            <tr>
+                <th>Fri</th>
+                <td>OS</td>
+                <td>Daa</td>
+                <td colspan="2">c1-python <br>c2-web <br>c3-Daa</td>
+                <td>cip</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Sat</th>
+                <td>Math</td>
+                <td>Daa</td>
+                <td colspan="2">Events</td>
+                <td>Daa</td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
